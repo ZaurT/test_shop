@@ -1,5 +1,7 @@
 $placeholder: #151515;
 $fontFamily: "OpenSansSemibold";
+$heading: "OpenSansBold";
+$shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16);
 
 html,
 body{
@@ -20,6 +22,33 @@ body{
 	font-family: "OpenSansSemibold";
 	src: url(../fonts/OpenSans-Semibold.ttf);
 }
+
+@font-face{
+    font-family: "OpenSansBold";
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+@font-face{
+    font-family: "RobotoMedium";
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face{
+    font-family: "RobotoBold";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+/*TITLE*/
+h1, h2, h3, h4, h5{
+    font-family: $heading;
+}
+
+h1{
+    font-size: 50px;
+}
+
+
+/*PROMO SECTION*/
 
 #promo-section{
 	background: url(../img/Pattern.png) top left no-repeat, 
@@ -57,11 +86,37 @@ input[type="search"]{
     padding-left: 70px !important;
     border-radius: 40px;
     height: $search-height;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: $shadow;
 
     &:focus{
     	background: #fff;
     }
+}
+
+.shadow{
+    box-shadow: $shadow;
+}
+
+.purple-shadow{
+    box-shadow: 0px 0px 50px 0px #edebfd;
+}
+
+.uk-background-default{
+
+}
+
+.z-index-minus-1{
+    position: relative;
+    z-index: -1;
+}
+
+.z-index-1{
+    position: relative;
+    z-index: 1;
+}
+
+.uk-margin-minus{
+    margin-top: -100px;
 }
 
 @mixin placeholder {
@@ -79,7 +134,8 @@ input[type="search"] {
 }
 
 .uk-search .uk-select {
-
+    background: url(../img/arrow-down.png) no-repeat !important;
+    background-position: calc(100% - 25px) center !important;
     position: absolute;
     right: 0;
     top: 0;
@@ -90,7 +146,141 @@ input[type="search"] {
     height: $search-height !important;
     color: $placeholder;
     font-family: $fontFamily;
-	background-image: none !important;
 	font-size: $search-font-size;
 	cursor: pointer;
 }
+
+.large-text{
+    font-size: 115px;
+    font-family: "RobotoBold";
+    margin: 0;
+}
+
+.medium-text{
+    font-size: 50px;
+    font-family: "RobotoMedium";
+}
+
+.uk-text-light{
+    color: #fff;
+}
+
+.uk-text-dark{
+    color: #000;
+}
+
+.uk-text-yellow{
+    color: #fbf934;
+}
+
+.uk-text-purple{
+    color: #7048e2;
+}
+
+.uk-button{
+    font-size: 20px;
+    font-family: "OpenSansSemibold";
+    padding: 23px 50px;
+    line-height: 1;
+    border-radius: 60px;
+    border: none;
+    box-shadow: $shadow;
+}
+
+.uk-button-default{
+    background: #fff;
+    color: #151515;
+
+    &:hover{
+        background: #eee;
+    }
+}
+
+.uk-button-primary{
+    background: #8c84f9;
+    background: -moz-linear-gradient(45deg, #8c84f9 0%, #a165f4 100%);
+    background: -webkit-linear-gradient(45deg, #8c84f9 0%,#a165f4 100%);
+    background: linear-gradient(45deg, #8c84f9 0%,#a165f4 100%);
+}
+
+.uk-flex-start{
+    align-items: start;
+}
+
+/*CARD*/
+
+.uk-card-title {
+    font-size: 18px;
+    color: #777777;
+    font-weight: normal;
+    font-family: "OpenSansRegular";
+}
+
+
+.uk-card{
+    img{
+        height: 260px;
+    }
+
+    .uk-button {
+        position: absolute;
+        white-space: nowrap;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 75%);
+        -webkit-transform: translate(-50%, 75%);
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    &:hover .uk-button{
+        opacity: 1;
+        transform: translate(-50%, 50%);
+        -webkit-transform: translate(-50%, 50%);
+    }
+
+    .icon{
+        width: 25px;
+        height: 25px;
+        padding: 0px 10px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &+span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &.icon-heart{
+            background-image: url(../img/line.png);
+        }
+
+        &.icon-comment{
+            background-image: url(../img/comment.png);
+        }
+    }
+
+    .card-header{
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    &:hover .card-header{
+        opacity: 1;
+    }
+
+    .uk-price{
+        font-family: $fontFamily;
+        font-size: 25px;
+    }
+
+    &:hover .uk-price{
+        color: #8c84f9;
+    }
+
+
+}
+
