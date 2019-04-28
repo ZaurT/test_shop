@@ -29,6 +29,19 @@ body {
   padding-top: 70px;
   padding-bottom: 70px; }
 
+.uk-margin-xsmall-top {
+  margin-top: 5px !important; }
+
+.uk-margin-xsmall-bottom {
+  margin-bottom: 5px !important; }
+
+.uk-margin-xsmall-right {
+  margin-right: 5px !important; }
+
+.uk-margin-xsmall-left {
+  margin-left: 5px !important; }
+
+/*SECTION*/
 /*POSITION*/
 .uk-position-top-right-out {
   transform: translate(100%, -100%);
@@ -44,11 +57,7 @@ body {
 
 /*PANEL*/
 .uk-panel {
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16);
-  border-radius: 40px; }
-
-.uk-panel {
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.06);
   border-radius: 40px; }
 
 .uk-panel.uk-subnav li {
@@ -81,6 +90,10 @@ p {
   color: #888888;
   line-height: 2.4; }
 
+.uk-bg-title {
+  font-size: 150px;
+  color: rgba(255, 255, 255, 0.08); }
+
 /*PROMO SECTION*/
 #promo-section {
   background: url(../img/Pattern.png) top left no-repeat, url(../img/promo.png) bottom left no-repeat, url(../img/promo-bg.png) no-repeat;
@@ -89,10 +102,6 @@ p {
 form.uk-search {
   width: 375px; }
 
-input[type="search"] {
-  font-family: "OpenSansSemibold";
-  font-size: 18px; }
-
 .uk-search .uk-search-icon {
   width: 70px;
   background: url(../img/search.png) no-repeat center; }
@@ -100,20 +109,53 @@ input[type="search"] {
     display: none; }
 
 .uk-search-default .uk-search-input {
-  background: #fff;
-  border: none;
   padding-left: 70px !important;
-  border-radius: 40px;
-  height: 66px;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16); }
   .uk-search-default .uk-search-input:focus {
     background: #fff; }
+
+input[type="search"],
+input[type="text"],
+input[type="email"],
+.uk-search-default .uk-search-input {
+  background: #fff;
+  border: none;
+  border-radius: 40px;
+  height: 66px;
+  font-family: "OpenSansSemibold";
+  font-size: 18px;
+  outline: none;
+  padding: 10px 30px; }
+  input[type="search"]::-webkit-input-placeholder,
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="email"]::-webkit-input-placeholder,
+  .uk-search-default .uk-search-input::-webkit-input-placeholder {
+    color: #151515;
+    opacity: 1 !important; }
+  input[type="search"]:-moz-placeholder,
+  input[type="text"]:-moz-placeholder,
+  input[type="email"]:-moz-placeholder,
+  .uk-search-default .uk-search-input:-moz-placeholder {
+    color: #151515;
+    opacity: 1 !important; }
+  input[type="search"]::-moz-placeholder,
+  input[type="text"]::-moz-placeholder,
+  input[type="email"]::-moz-placeholder,
+  .uk-search-default .uk-search-input::-moz-placeholder {
+    color: #151515;
+    opacity: 1 !important; }
+  input[type="search"]:-ms-input-placeholder,
+  input[type="text"]:-ms-input-placeholder,
+  input[type="email"]:-ms-input-placeholder,
+  .uk-search-default .uk-search-input:-ms-input-placeholder {
+    color: #151515;
+    opacity: 1 !important; }
 
 .shadow {
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16); }
 
 .purple-shadow {
-  box-shadow: 0px 0px 50px 0px #edebfd; }
+  box-shadow: 0px 0px 50px 0px rgba(155, 111, 246, 0.1019); }
 
 .z-index-minus-1 {
   position: relative;
@@ -124,20 +166,7 @@ input[type="search"] {
   z-index: 1; }
 
 .uk-margin-minus {
-  margin-top: -100px; }
-
-input[type="search"]::-webkit-input-placeholder {
-  color: #151515;
-  opacity: 1 !important; }
-input[type="search"]:-moz-placeholder {
-  color: #151515;
-  opacity: 1 !important; }
-input[type="search"]::-moz-placeholder {
-  color: #151515;
-  opacity: 1 !important; }
-input[type="search"]:-ms-input-placeholder {
-  color: #151515;
-  opacity: 1 !important; }
+  margin-top: -120px; }
 
 .uk-search .uk-select {
   background: url(../img/arrow-down.png) no-repeat !important;
@@ -194,7 +223,7 @@ input[type="search"]:-ms-input-placeholder {
   .uk-button-default:hover {
     background: #eee; }
 
-.uk-button-primary {
+.uk-section-purple, .uk-button-primary {
   background: #8c84f9;
   background: -moz-linear-gradient(45deg, #8c84f9 0%, #a165f4 100%);
   background: -webkit-linear-gradient(45deg, #8c84f9 0%, #a165f4 100%);
