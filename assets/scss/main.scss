@@ -38,6 +38,11 @@ body{
     src: url(../fonts/Roboto-Bold.ttf);
 }
 
+@font-face{
+    font-family: "MontserratLight";
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+
 
 /*SPACES*/
 
@@ -115,6 +120,11 @@ h1{
     font-size: 50px;
 }
 
+h2{
+    font-size: 40px;
+    font-family: "RobotoMedium";
+}
+
 h4{
     font-family: "OpenSansRegular";
     font-size: 25px;
@@ -128,6 +138,39 @@ p{
 .uk-bg-title{
     font-size: 150px;
     color: rgba(255, 255, 255, 0.08);
+}
+
+.uk-text-thin{
+    font-size: 15px;
+    font-family: "MontserratLight";
+}
+
+/*NAVBAR*/
+
+.uk-navbar-nav>li>a{
+    font-size: 18px;
+    color: #404040;
+    font-family: "OpenSansSemibold";
+    text-transform: capitalize;
+}
+
+/*FOOTER ICONS*/
+
+ul.footer-icons a {
+    width: 54px;
+    height: 54px;
+    font-size: 23px;
+    color: #555555;
+    margin: 0px 10px;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 2px #ccc;
+    min-height: 0;
+
+    &:hover{
+        @extend %linear-gradient;
+        color: #fff;
+        box-shadow: none;
+    }
 }
 
 /*PROMO SECTION*/
@@ -293,7 +336,7 @@ input[type="email"],
 }
 
 .uk-button-primary{
- @extend %linear-gradient;
+    @extend %linear-gradient;
 }
 
 .uk-flex-start{
