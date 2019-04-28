@@ -38,7 +38,23 @@ body{
     src: url(../fonts/Roboto-Bold.ttf);
 }
 
-/*TITLE*/
+/*MAIN*/
+.uk-position-top-right-out{
+    transform: translate(100%, -100%);
+    -webkit-transform: translate(100%, -100%);
+}
+
+.uk-position-top-right-out-25{
+    transform: translate(25%, -25%);
+    -webkit-transform: translate(25%, -25%);
+}
+
+.uk-position-top-right-out-25-15{
+    transform: translate(25%, -15%);
+    -webkit-transform: translate(25%, -15%);
+}
+
+/*TEXT*/
 h1, h2, h3, h4, h5{
     font-family: $heading;
 }
@@ -47,6 +63,15 @@ h1{
     font-size: 50px;
 }
 
+h4{
+    font-family: "OpenSansRegular";
+    font-size: 25px;
+}
+
+p{
+    color: #888888;
+    line-height: 2.4;
+}
 
 /*PROMO SECTION*/
 
@@ -175,6 +200,10 @@ input[type="search"] {
 
 .uk-text-purple{
     color: #7048e2;
+}
+
+.uk-text-purple-light{
+    color: #8d83f9;
 }
 
 .uk-button{
