@@ -478,6 +478,10 @@ input[type="email"],
 }
 
 @media (max-width: 1200px){
+    [uk-parallax] {
+        transform: none !important;
+    }
+    
     .uk-position-bottom-right-l{
         position: static !important;
     }
@@ -543,6 +547,8 @@ input[type="email"],
     .uk-position-top-right-m{
         position: static !important;
     }
+
+
 }
 
 @media (min-width: 640px){

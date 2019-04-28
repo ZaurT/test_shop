@@ -353,6 +353,9 @@ input[type="email"],
   .uk-flex-start-l {
     align-items: flex-start; } }
 @media (max-width: 1200px) {
+  [uk-parallax] {
+    transform: none !important; }
+
   .uk-position-bottom-right-l {
     position: static !important; }
 
