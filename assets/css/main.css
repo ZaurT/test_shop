@@ -20,7 +20,16 @@ body {
 @font-face {
   font-family: "RobotoBold";
   src: url(../fonts/Roboto-Bold.ttf); }
-/*MAIN*/
+/*SPACES*/
+.uk-padding-large-x {
+  padding-left: 70px;
+  padding-right: 70px; }
+
+.uk-padding-large-y {
+  padding-top: 70px;
+  padding-bottom: 70px; }
+
+/*POSITION*/
 .uk-position-top-right-out {
   transform: translate(100%, -100%);
   -webkit-transform: translate(100%, -100%); }
@@ -32,6 +41,30 @@ body {
 .uk-position-top-right-out-25-15 {
   transform: translate(25%, -15%);
   -webkit-transform: translate(25%, -15%); }
+
+/*PANEL*/
+.uk-panel {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 40px; }
+
+.uk-panel {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 40px; }
+
+.uk-panel.uk-subnav li {
+  padding-left: 0; }
+  .uk-panel.uk-subnav li a {
+    padding: 26px 30px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #333333;
+    text-transform: capitalize;
+    font-family: "OpenSansSemibold"; }
+  .uk-panel.uk-subnav li.uk-active a {
+    background: transparent;
+    font-size: 20px;
+    color: #b394fa;
+    text-shadow: 0px 4px 3px rgba(179, 148, 250, 0.6); }
 
 /*TEXT*/
 h1, h2, h3, h4, h5 {
